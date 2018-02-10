@@ -52,8 +52,8 @@ class BikeSystem(ABC):
         stations = self.mp.index
         res = self.data[self.data.startstation.isin(stations)
                               & self.data.endstation.isin(stations)]
-        print("After filtering nrows = ", len(self.data))
-        print(len(self.data) / n, " remains.")
+        print("After filtering nrows = ", len(res))
+        print(len(res) / n, " remains.")
         return res
 
     def _load_data(self, loader):
